@@ -252,11 +252,12 @@
         <div class="absolute bottom-20 right-10 w-96 h-96 bg-brand-pink/5 rounded-full blur-3xl pointer-events-none"></div>
 
         <!-- Foto background seamless (desktop) — funde com o fundo escuro -->
-        <div class="hidden md:block absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none">
-            <img src="edenio-hero.jpg" alt="Edenio Costa" class="absolute bottom-0 right-0 w-full h-full object-contain object-bottom foto-real" style="mask-image: linear-gradient(to left, transparent 0%, black 15%, black 85%, transparent 100%); -webkit-mask-image: linear-gradient(to left, transparent 0%, black 15%, black 85%, transparent 100%);">
+        <div class="hidden md:block absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none overflow-hidden">
+            <img src="edenio-hero.jpg" alt="Edenio Costa" class="absolute bottom-0 right-0 w-full h-full object-cover object-top scale-110 foto-real" style="mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 40%, transparent 72%); -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 40%, transparent 72%);">
             <!-- Fade edges pra fundir com background -->
-            <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]/50"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/30 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]/70"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/50 via-transparent to-[#0a0a0a]"></div>
         </div>
 
         <div class="relative z-10 max-w-6xl mx-auto w-full">
