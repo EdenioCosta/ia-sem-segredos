@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Sem Segredos — Imersão Presencial de IA no Rio de Janeiro</title>
+    <meta name="description" content="Aprenda a ganhar dinheiro com IA em 1 dia. Imersão presencial e prática no Rio de Janeiro com Edenio Costa.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            bg: '#0a0a0a',
+                            card: '#111111',
+                            card2: '#141414',
+                            border: '#1a1a1a',
+                            border2: '#222222',
+                            green: '#00E676',
+                            greenHover: '#00C853',
+                            pink: '#e84393',
+                            text: '#d1d5db',
+                            white: '#ffffff',
+                            red: '#ef4444',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #0a0a0a; color: #d1d5db; font-family: 'Inter', sans-serif; }
+        .fade-in { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .fade-in.hidden-init { opacity: 0; transform: translateY(24px); }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .faq-answer.open { max-height: 600px; }
+        .faq-icon { transition: transform 0.3s ease; }
+        .faq-icon.open { transform: rotate(45deg); }
+        .cta-btn { background-color: #00E676; color: #0a0a0a; }
+        .cta-btn:hover { background-color: #00C853; }
+        .mobile-cta { transform: translateY(100%); transition: transform 0.3s ease; }
+        .mobile-cta.show { transform: translateY(0); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ========== HEADER FIXO ========== -->
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-brand-bg/80 border-b border-brand-border">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#" class="text-brand-white font-extrabold text-xl tracking-tight">IA <span class="text-brand-green">Sem Segredos</span></a>
+            <div class="hidden sm:flex items-center gap-2 text-sm text-brand-text">
+                <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <span>[INSERIR DATA]</span>
+                <span class="text-brand-border2">|</span>
+                <span>Presencial no Rio de Janeiro</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="pt-28 pb-16 md:pt-36 md:pb-24">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="fade-in">
+                    <p class="text-brand-green font-semibold text-sm uppercase tracking-widest mb-4">Imersão presencial de 1 dia</p>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-white leading-tight mb-6">
+                        Existe um jeito simples de ganhar dinheiro com IA que pouca gente conhece. <span class="text-brand-green">Em 1 dia, eu te mostro qual é.</span>
+                    </h1>
+                    <p class="text-lg text-brand-text mb-8 max-w-lg">
+                        Uma imersão presencial, prática, no Rio de Janeiro — pra você que não é designer, não é programador e nunca mexeu com IA na vida.
+                    </p>
+                    <a href="#preco" class="cta-btn inline-block px-8 py-4 rounded-lg font-bold text-base uppercase tracking-wide">
+                        Quero ver com meus próprios olhos
+                    </a>
+                    <p class="mt-4 text-sm text-brand-text/70">Vagas limitadas — inscrições abertas</p>
+                </div>
+                <div class="fade-in flex justify-center">
+                    <div class="w-full max-w-md aspect-[3/4] bg-brand-card rounded-2xl border border-brand-border2 flex items-center justify-center text-brand-text/40 text-sm">
+                        [INSERIR FOTO DO EDENIO COSTA]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SEÇÃO DE DOR ========== -->
+    <section class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 fade-in">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-white text-center leading-tight mb-4">
+                Neste exato segundo, alguém que sabe menos que você está fechando um cliente com IA. A única diferença? <span class="text-brand-green">Essa pessoa já começou.</span>
+            </h2>
+            <p class="text-center text-brand-text mb-10">Isso não é exagero.</p>
+
+            <div class="bg-brand-card border border-brand-border rounded-2xl p-6 sm:p-10 space-y-5 text-brand-text text-base sm:text-lg leading-relaxed">
+                <p>A maioria das pessoas usa IA pra brincar. Fazer imagem engraçada, testar chatbot e pronto.</p>
+                <p>Mas um grupo pequeno já sacou o que ninguém tá vendo: <span class="text-brand-white font-semibold">empresas estão pagando caro por conteúdo feito com IA.</span> Imagens profissionais. Vídeos cinematográficos. Campanhas inteiras.</p>
+                <p>Gente sem formação, sem experiência, faturando <span class="text-brand-green font-bold">R$3.000, R$5.000, R$10.000 por mês.</span> Com um computador e as ferramentas certas.</p>
+                <p class="text-brand-white font-bold text-xl pt-4">Você pode continuar só olhando. Ou pode ser o próximo.</p>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#preco" class="cta-btn inline-block px-8 py-4 rounded-lg font-bold text-base uppercase tracking-wide">
+                    Eu quero ser o próximo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DIFERENCIADORES ========== -->
+    <section class="py-16 md:py-24 bg-brand-card">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="fade-in bg-brand-card2 border border-brand-border2 rounded-2xl p-8">
+                    <div class="w-10 h-10 rounded-full bg-brand-green/10 flex items-center justify-center mb-5">
+                        <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <p class="text-brand-white text-base sm:text-lg leading-relaxed">Você vai criar junto comigo, ao vivo, na hora. Não vai ficar assistindo — <span class="text-brand-green font-semibold">vai botar a mão na massa.</span></p>
+                </div>
+                <div class="fade-in bg-brand-card2 border border-brand-border2 rounded-2xl p-8">
+                    <div class="w-10 h-10 rounded-full bg-brand-green/10 flex items-center justify-center mb-5">
+                        <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <p class="text-brand-white text-base sm:text-lg leading-relaxed">Vou te mostrar um método que simplifica tudo. <span class="text-brand-green font-semibold">O que parece complicado vai ficar óbvio em minutos.</span></p>
+                </div>
+                <div class="fade-in bg-brand-card2 border border-brand-border2 rounded-2xl p-8">
+                    <div class="w-10 h-10 rounded-full bg-brand-green/10 flex items-center justify-center mb-5">
+                        <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <p class="text-brand-white text-base sm:text-lg leading-relaxed">No final do dia, você vai sair sabendo fazer algo que <span class="text-brand-green font-semibold">99% das pessoas nem imagina que existe.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTEÚDO DA IMERSÃO ========== -->
+    <section class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-14 fade-in">
+                <p class="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Conteúdo</p>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-white">
+                    Tudo o que você vai aprender na Imersão IA Sem Segredos
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Módulo 1 -->
+                <div class="fade-in bg-brand-card border border-brand-border rounded-2xl p-7 flex flex-col">
+                    <div class="text-brand-green text-3xl font-extrabold mb-2">01</div>
+                    <h3 class="text-brand-white font-bold text-lg mb-1">O caminho mais rápido pra faturar com IA</h3>
+                    <p class="text-brand-pink text-sm line-through mb-3">R$297,00</p>
+                    <p class="text-brand-text text-sm leading-relaxed flex-1">Você vai entender exatamente quais serviços de IA empresas já estão pagando — e como começar a oferecer essa semana.</p>
+                </div>
+                <!-- Módulo 2 -->
+                <div class="fade-in bg-brand-card border border-brand-border rounded-2xl p-7 flex flex-col">
+                    <div class="text-brand-green text-3xl font-extrabold mb-2">02</div>
+                    <h3 class="text-brand-white font-bold text-lg mb-1">Como criar imagens de estúdio escrevendo uma frase</h3>
+                    <p class="text-brand-pink text-sm line-through mb-3">R$297,00</p>
+                    <p class="text-brand-text text-sm leading-relaxed flex-1">Sem Photoshop. Sem Canva. Sem experiência. Você escreve o que quer e a IA cria uma imagem profissional em segundos.</p>
+                </div>
+                <!-- Módulo 3 -->
+                <div class="fade-in bg-brand-card border border-brand-border rounded-2xl p-7 flex flex-col">
+                    <div class="text-brand-green text-3xl font-extrabold mb-2">03</div>
+                    <h3 class="text-brand-white font-bold text-lg mb-1">O segredo por trás de vídeos que parecem Hollywood</h3>
+                    <p class="text-brand-pink text-sm line-through mb-3">R$297,00</p>
+                    <p class="text-brand-text text-sm leading-relaxed flex-1">Feitos por 1 pessoa, com 1 computador. Veja na prática como criar vídeos cinematográficos com IA — sem saber nada de edição.</p>
+                </div>
+                <!-- Módulo 4 -->
+                <div class="fade-in bg-brand-card border border-brand-border rounded-2xl p-7 flex flex-col">
+                    <div class="text-brand-green text-3xl font-extrabold mb-2">04</div>
+                    <h3 class="text-brand-white font-bold text-lg mb-1">O serviço que empresas pagam R$5.000</h3>
+                    <p class="text-brand-pink text-sm line-through mb-3">R$297,00</p>
+                    <p class="text-brand-text text-sm leading-relaxed flex-1">Campanhas publicitárias com produtos reais e consistentes — o tipo de trabalho que empresas pagam caro e que você vai aprender a entregar.</p>
+                </div>
+                <!-- Módulo 5 -->
+                <div class="fade-in bg-brand-card border border-brand-border rounded-2xl p-7 flex flex-col">
+                    <div class="text-brand-green text-3xl font-extrabold mb-2">05</div>
+                    <h3 class="text-brand-white font-bold text-lg mb-1">As ferramentas que os melhores usam (e quase ninguém conhece)</h3>
+                    <p class="text-brand-pink text-sm line-through mb-3">R$297,00</p>
+                    <p class="text-brand-text text-sm leading-relaxed flex-1">Midjourney, Flux, Veo, Sora, Runway — as ferramentas mais poderosas do mundo sendo usadas ao vivo na sua frente.</p>
+                </div>
+                <!-- Módulo 6 -->
+                <div class="fade-in bg-brand-card border border-brand-border rounded-2xl p-7 flex flex-col">
+                    <div class="text-brand-green text-3xl font-extrabold mb-2">06</div>
+                    <h3 class="text-brand-white font-bold text-lg mb-1">Como conseguir seu primeiro cliente em dias</h3>
+                    <p class="text-brand-pink text-sm line-through mb-3">R$297,00</p>
+                    <p class="text-brand-text text-sm leading-relaxed flex-1">O passo a passo completo para você sair da imersão e conquistar seu primeiro cliente pagante com IA nos dias seguintes.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 fade-in">
+                <a href="#preco" class="cta-btn inline-block px-8 py-4 rounded-lg font-bold text-base uppercase tracking-wide">
+                    Quero aprender antes de todo mundo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BÔNUS ========== -->
+    <section class="py-16 md:py-24 bg-brand-card">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <p class="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Bônus exclusivo</p>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-white">
+                    E tem mais — só pra quem estiver na imersão.
+                </h2>
+                <p class="text-brand-text mt-4 max-w-2xl mx-auto">Eu passei meses construindo dois assistentes de IA que fazem algo absurdo:</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div class="fade-in bg-brand-bg border border-brand-green/20 rounded-2xl p-8">
+                    <div class="inline-block bg-brand-green/10 text-brand-green text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">Bônus 1</div>
+                    <h3 class="text-brand-white font-bold text-xl mb-3">EdinhoJPEG</h3>
+                    <p class="text-brand-text leading-relaxed mb-4">Você descreve o que quer e ele cria uma imagem profissional em segundos. Sem Canva. Sem Photoshop. Sem saber design.</p>
+                    <p class="text-brand-pink line-through text-sm">R$197,00</p>
+                    <p class="text-brand-green font-bold">De graça na imersão</p>
+                </div>
+                <div class="fade-in bg-brand-bg border border-brand-green/20 rounded-2xl p-8">
+                    <div class="inline-block bg-brand-green/10 text-brand-green text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">Bônus 2</div>
+                    <h3 class="text-brand-white font-bold text-xl mb-3">EdinhoMP4</h3>
+                    <p class="text-brand-text leading-relaxed mb-4">A mesma coisa, mas pra vídeos. Você fala, ele cria. Vídeos profissionais com IA em poucos cliques.</p>
+                    <p class="text-brand-pink line-through text-sm">R$197,00</p>
+                    <p class="text-brand-green font-bold">De graça na imersão</p>
+                </div>
+            </div>
+
+            <p class="text-center text-brand-text mt-8 fade-in">E eu vou te ensinar a usar os dois ao vivo — pra você sair criando no mesmo dia.</p>
+        </div>
+    </section>
+
+    <!-- ========== PRA QUEM É / NÃO É ========== -->
+    <section class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-white">
+                    Essa imersão é pra você?
+                </h2>
+                <p class="text-brand-text mt-4 max-w-2xl mx-auto">Zero experiência com IA? Melhor ainda. Essa imersão foi feita pra quem tá começando do zero. Você só precisa aparecer — o resto eu te mostro, passo a passo, ao vivo.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- É PRA VOCÊ -->
+                <div class="fade-in bg-brand-card border border-brand-green/20 rounded-2xl p-8">
+                    <h3 class="text-brand-green font-bold text-xl mb-6">É pra você que:</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-green mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span><span class="text-brand-white font-semibold">É empreendedor</span> — seus concorrentes já estão usando IA. Você vai aprender a criar campanhas profissionais sem gastar com agência.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-green mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span><span class="text-brand-white font-semibold">É criador de conteúdo</span> — enquanto outros demoram horas, você vai produzir em minutos, com mais qualidade.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-green mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span><span class="text-brand-white font-semibold">É social media ou freelancer</span> — vai entregar 3x mais projetos e cobrar mais caro. Seus clientes nem vão saber que foi IA.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-green mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span><span class="text-brand-white font-semibold">Está em transição de carreira</span> — o mercado está desesperado por quem sabe usar IA. Você vai chegar antes da multidão.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-green mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span><span class="text-brand-white font-semibold">É iniciante curioso</span> — você não precisa de experiência. Precisa de um dia. Depois disso, tudo muda.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- NÃO É PRA VOCÊ -->
+                <div class="fade-in bg-brand-card border border-brand-red/20 rounded-2xl p-8">
+                    <h3 class="text-brand-red font-bold text-xl mb-6">Não é pra você que:</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-red mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                            <span>Quer fórmula mágica sem fazer nada — aqui é mão na massa, não palestra motivacional.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-red mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                            <span>Já domina IA e trabalha profissionalmente com isso — o conteúdo é pra quem está começando.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-red mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                            <span>Acha que IA é "modinha" e não vai durar — essa oportunidade é pra quem quer agir agora.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-red mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                            <span>Não está disposto a dedicar 1 dia inteiro pra mudar de patamar na carreira.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-10 fade-in">
+                <p class="text-brand-white font-bold text-lg mb-6">Quem aprende agora escolhe quanto quer ganhar. Quem espera, vai assistir os outros ganhando.</p>
+                <a href="#preco" class="cta-btn inline-block px-8 py-4 rounded-lg font-bold text-base uppercase tracking-wide">
+                    Quero aprender antes de todo mundo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== QUEM VAI CONDUZIR (Autoridade) ========== -->
+    <section class="py-16 md:py-24 bg-brand-card">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="fade-in order-2 md:order-1">
+                    <p class="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Sobre</p>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-white mb-6">Quem vai conduzir a imersão?</h2>
+                    <div class="space-y-4 text-brand-text leading-relaxed">
+                        <p>Eu não sou programador. Não sou designer. Não tenho formação em tecnologia.</p>
+                        <p><span class="text-brand-white font-semibold">Sou uma pessoa comum que descobriu como transformar IA em renda.</span> E hoje, ensino outras pessoas a fazerem o mesmo.</p>
+                        <p>Imagens que parecem feitas por estúdios de design. Vídeos cinematográficos que parecem produção de Hollywood. Campanhas publicitárias que empresas pagam milhares de reais. Tudo feito com IA, por uma pessoa, com um computador.</p>
+                        <p>Já vi gente saindo do zero e faturando em semanas. Vi pessoas que nunca tinham criado nada na vida entregando projetos profissionais para empresas — e sendo pagas por isso.</p>
+                        <p>No dia <strong class="text-brand-white">[INSERIR DATA]</strong> eu quero te mostrar exatamente como fazer isso. Ao vivo. Na prática. Sem enrolação. Sem jargão técnico.</p>
+                    </div>
+                    <div class="mt-6 inline-block bg-brand-green/10 border border-brand-green/20 text-brand-green text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full">
+                        Empreendedor serial + Especialista em IA aplicada
+                    </div>
+                    <div class="mt-6 flex flex-wrap gap-4 text-brand-text/40 text-xs">
+                        [INSERIR LOGOS: Doctor IA, OticaPro, EducaPro, MidiaPro, TaskPro]
+                    </div>
+                    <div class="mt-8">
+                        <a href="#preco" class="cta-btn inline-block px-8 py-4 rounded-lg font-bold text-base uppercase tracking-wide">
+                            Quero aprender com quem já faz
+                        </a>
+                    </div>
+                </div>
+                <div class="fade-in order-1 md:order-2 flex justify-center">
+                    <div class="w-full max-w-sm aspect-[3/4] bg-brand-bg rounded-2xl border border-brand-border2 flex items-center justify-center text-brand-text/40 text-sm">
+                        [INSERIR FOTO DO EDENIO COSTA]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== QUANTO CUSTA (Stack de oferta + Preço) ========== -->
+    <section id="preco" class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <p class="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Vagas limitadas</p>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-white">Quanto custa?</h2>
+                <p class="text-brand-text mt-4">É isso que você vai ter acesso na Imersão IA Sem Segredos:</p>
+            </div>
+
+            <!-- Stack -->
+            <div class="fade-in bg-brand-card border border-brand-border rounded-2xl p-6 sm:p-10 mb-8">
+                <ul class="space-y-4">
+                    <li class="flex items-center justify-between gap-4 pb-4 border-b border-brand-border">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-green shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-brand-white">Imersão presencial de 1 dia completo</span>
+                        </div>
+                        <span class="text-brand-text text-sm whitespace-nowrap">R$297</span>
+                    </li>
+                    <li class="flex items-center justify-between gap-4 pb-4 border-b border-brand-border">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-green shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-brand-white">O caminho mais rápido pra faturar com IA</span>
+                        </div>
+                        <span class="text-brand-text text-sm whitespace-nowrap">R$297</span>
+                    </li>
+                    <li class="flex items-center justify-between gap-4 pb-4 border-b border-brand-border">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-green shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-brand-white">Como criar imagens de estúdio escrevendo uma frase</span>
+                        </div>
+                        <span class="text-brand-text text-sm whitespace-nowrap">R$297</span>
+                    </li>
+                    <li class="flex items-center justify-between gap-4 pb-4 border-b border-brand-border">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-green shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-brand-white">O segredo por trás de vídeos que parecem Hollywood</span>
+                        </div>
+                        <span class="text-brand-text text-sm whitespace-nowrap">R$297</span>
+                    </li>
+                    <li class="flex items-center justify-between gap-4 pb-4 border-b border-brand-border">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-green shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-brand-white">O serviço que empresas pagam R$5.000</span>
+                        </div>
+                        <span class="text-brand-text text-sm whitespace-nowrap">R$297</span>
+                    </li>
+                    <li class="flex items-center justify-between gap-4 pb-4 border-b border-brand-border">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-green shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-brand-white">As ferramentas que os melhores usam</span>
+                        </div>
+                        <span class="text-brand-text text-sm whitespace-nowrap">R$297</span>
+                    </li>
+                    <li class="flex items-center justify-between gap-4 pb-4 border-b border-brand-border">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-green shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-brand-white">Como conseguir seu primeiro cliente em dias</span>
+                        </div>
+                        <span class="text-brand-text text-sm whitespace-nowrap">R$297</span>
+                    </li>
+                    <li class="flex items-center justify-between gap-4 pb-4 border-b border-brand-border">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-green shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-brand-white">Assistentes EdinhoJPEG + EdinhoMP4</span>
+                        </div>
+                        <span class="text-brand-text text-sm whitespace-nowrap">R$197</span>
+                    </li>
+                    <li class="flex items-center justify-between gap-4 pb-4 border-b border-brand-border">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-green shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-brand-white">Material de apoio exclusivo</span>
+                        </div>
+                        <span class="text-brand-text text-sm whitespace-nowrap">R$97</span>
+                    </li>
+                    <li class="flex items-center justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-green shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-brand-white">Certificado de participação</span>
+                        </div>
+                        <span class="text-brand-text text-sm whitespace-nowrap">R$97</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Preço -->
+            <div class="fade-in bg-brand-card border-2 border-brand-green/40 rounded-2xl p-8 sm:p-12 text-center">
+                <p class="text-brand-text text-sm mb-2">Valor total dos conteúdos:</p>
+                <p class="text-brand-pink text-2xl line-through font-bold mb-1">R$2.470,00</p>
+                <p class="text-brand-text text-sm mb-4">Seu investimento hoje:</p>
+                <p class="text-brand-green text-5xl sm:text-6xl font-extrabold mb-2">R$ [INSERIR PREÇO]</p>
+                <p class="text-brand-text text-sm mb-8">ou [INSERIR PARCELAMENTO]</p>
+                <a href="#" class="cta-btn inline-block px-10 py-5 rounded-lg font-bold text-lg uppercase tracking-wide">
+                    Garantir minha vaga antes que acabe
+                </a>
+                <p class="mt-4 text-brand-text/60 text-sm">[X]% das vagas já preenchidas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GARANTIA ========== -->
+    <section class="py-16 md:py-24 bg-brand-card">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="fade-in bg-brand-bg border border-brand-border2 rounded-2xl p-8 sm:p-12 text-center">
+                <div class="w-16 h-16 rounded-full bg-brand-green/10 flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-white mb-2">Sem risco. Garantia total.</h2>
+                <p class="text-brand-text leading-relaxed max-w-xl mx-auto">
+                    Se nos primeiros 30 minutos de imersão você sentir que não é pra você, é só falar comigo. <span class="text-brand-white font-semibold">Devolvemos 100% do seu dinheiro, sem perguntas.</span>
+                </p>
+                <p class="text-brand-text mt-4">Simples assim. O risco é zero. A oportunidade é real.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Perguntas -->
+                <div class="md:col-span-2 fade-in">
+                    <p class="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Dúvidas</p>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-white mb-8">Perguntas que todo mundo faz antes de se inscrever</h2>
+
+                    <div class="space-y-3" id="faq-list">
+                        <div class="faq-item bg-brand-card border border-brand-border rounded-xl">
+                            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                                <span class="text-brand-white font-semibold pr-4">Preciso saber algo sobre IA pra participar?</span>
+                                <span class="faq-icon text-brand-green text-2xl font-light shrink-0">+</span>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-brand-text">Nada. Zero. A imersão começa do absoluto zero. Você só precisa aparecer — o resto eu te mostro.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-brand-card border border-brand-border rounded-xl">
+                            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                                <span class="text-brand-white font-semibold pr-4">Preciso levar notebook?</span>
+                                <span class="faq-icon text-brand-green text-2xl font-light shrink-0">+</span>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-brand-text">Não é obrigatório, mas se quiser acompanhar na prática, recomendamos trazer. Todas as ferramentas rodam no navegador, sem instalar nada.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-brand-card border border-brand-border rounded-xl">
+                            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                                <span class="text-brand-white font-semibold pr-4">Onde vai ser?</span>
+                                <span class="faq-icon text-brand-green text-2xl font-light shrink-0">+</span>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-brand-text">Presencial no Rio de Janeiro. O endereço exato é enviado após a confirmação da inscrição. [INSERIR BAIRRO/REGIÃO]</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-brand-card border border-brand-border rounded-xl">
+                            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                                <span class="text-brand-white font-semibold pr-4">Qual o horário da imersão?</span>
+                                <span class="faq-icon text-brand-green text-2xl font-light shrink-0">+</span>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <div class="text-brand-text space-y-2">
+                                    <p>Das 09h00 às 17h30, com intervalo para almoço.</p>
+                                    <div class="mt-3 space-y-1 text-sm">
+                                        <p><span class="text-brand-white">09h00</span> — Credenciamento + café</p>
+                                        <p><span class="text-brand-white">09h30</span> — Início da imersão</p>
+                                        <p><span class="text-brand-white">12h00</span> — Almoço</p>
+                                        <p><span class="text-brand-white">14h00</span> — Retorno — sessão prática</p>
+                                        <p><span class="text-brand-white">17h30</span> — Encerramento + networking</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-brand-card border border-brand-border rounded-xl">
+                            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                                <span class="text-brand-white font-semibold pr-4">A imersão será gravada?</span>
+                                <span class="faq-icon text-brand-green text-2xl font-light shrink-0">+</span>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-brand-text">O foco é na experiência presencial e ao vivo. [INSERIR POLÍTICA DE GRAVAÇÃO]</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-brand-card border border-brand-border rounded-xl">
+                            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                                <span class="text-brand-white font-semibold pr-4">Preciso de um computador potente?</span>
+                                <span class="faq-icon text-brand-green text-2xl font-light shrink-0">+</span>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-brand-text">Não. Tudo roda no navegador. Um computador simples com internet é suficiente.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-brand-card border border-brand-border rounded-xl">
+                            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                                <span class="text-brand-white font-semibold pr-4">As ferramentas são pagas ou gratuitas?</span>
+                                <span class="faq-icon text-brand-green text-2xl font-light shrink-0">+</span>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-brand-text">Vamos usar as duas opções. Você vai criar projetos com ferramentas gratuitas — e também vai conhecer as pagas que aceleram os resultados.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-brand-card border border-brand-border rounded-xl">
+                            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                                <span class="text-brand-white font-semibold pr-4">Vou conseguir ganhar dinheiro mesmo sem experiência?</span>
+                                <span class="faq-icon text-brand-green text-2xl font-light shrink-0">+</span>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-brand-text">Sim. A imersão foi feita exatamente pra isso. Você vai sair com o passo a passo de como oferecer serviços de IA pra empresas e conseguir seus primeiros clientes.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-brand-card border border-brand-border rounded-xl">
+                            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                                <span class="text-brand-white font-semibold pr-4">Tem estacionamento?</span>
+                                <span class="faq-icon text-brand-green text-2xl font-light shrink-0">+</span>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-brand-text">[INSERIR INFORMAÇÃO SOBRE ESTACIONAMENTO]</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-brand-card border border-brand-border rounded-xl">
+                            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                                <span class="text-brand-white font-semibold pr-4">Posso pedir reembolso?</span>
+                                <span class="faq-icon text-brand-green text-2xl font-light shrink-0">+</span>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-brand-text">Sim. Se nos primeiros 30 minutos você sentir que não é pra você, devolvemos 100% — sem perguntas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card WhatsApp -->
+                <div class="fade-in">
+                    <div class="bg-brand-card border border-brand-border rounded-2xl p-8 sticky top-24">
+                        <h3 class="text-brand-white font-bold text-lg mb-2">Ainda tem dúvida?</h3>
+                        <p class="text-brand-text text-sm mb-6">Fala comigo direto pelo WhatsApp.</p>
+                        <a href="#" class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3 px-6 rounded-lg text-sm uppercase tracking-wide transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Falar com o suporte agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== URGÊNCIA FINAL ========== -->
+    <section class="py-16 md:py-24 bg-brand-card">
+        <div class="max-w-3xl mx-auto px-4 text-center fade-in">
+            <p class="text-brand-green font-semibold text-sm uppercase tracking-widest mb-3">Última chance</p>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-white mb-4">
+                Você chegou até aqui. Agora só falta um passo.
+            </h2>
+            <p class="text-brand-text text-lg leading-relaxed mb-4 max-w-xl mx-auto">
+                Só tem dois caminhos: aprender agora e sair na frente, ou esperar e correr atrás depois.
+            </p>
+            <p class="text-brand-text mb-4">As vagas são limitadas. Quando acabar, acabou.</p>
+            <p class="text-brand-white font-semibold mb-8">A próxima pessoa que garantir a vaga pode ser você — ou pode ser alguém que vai concorrer com você.</p>
+            <a href="#preco" class="cta-btn inline-block px-10 py-5 rounded-lg font-bold text-lg uppercase tracking-wide">
+                Garantir minha vaga antes que acabe
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== RODAPÉ ========== -->
+    <footer class="py-8 border-t border-brand-border">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-brand-text/50">
+            <p>Todos os direitos reservados &copy; 2026 — IA Sem Segredos</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-brand-text transition-colors">Política de Privacidade</a>
+                <a href="#" class="hover:text-brand-text transition-colors">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== CTA FIXO MOBILE ========== -->
+    <div id="mobileCta" class="mobile-cta fixed bottom-0 left-0 right-0 z-50 p-3 bg-brand-bg/95 backdrop-blur-sm border-t border-brand-border md:hidden">
+        <a href="#preco" class="cta-btn block text-center px-6 py-3.5 rounded-lg font-bold text-sm uppercase tracking-wide">
+            Garantir minha vaga
+        </a>
+    </div>
+
+    <!-- ========== BOTÃO WHATSAPP FLUTUANTE ========== -->
+    <a href="#" id="whatsappBtn" class="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full flex items-center justify-center shadow-lg shadow-black/30 transition-transform hover:scale-110" aria-label="WhatsApp">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // FAQ Toggle
+        function toggleFaq(btn) {
+            const answer = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+            const isOpen = answer.classList.contains('open');
+
+            // Fecha todos
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+            document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
+
+            // Abre o clicado (se não estava aberto)
+            if (!isOpen) {
+                answer.classList.add('open');
+                icon.classList.add('open');
+            }
+        }
+
+        // Intersection Observer — fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('hidden-init');
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.classList.add('hidden-init');
+            observer.observe(el);
+        });
+
+        // Mobile CTA — aparece ao scrollar
+        const mobileCta = document.getElementById('mobileCta');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                mobileCta.classList.add('show');
+            } else {
+                mobileCta.classList.remove('show');
+            }
+        }, { passive: true });
+    </script>
+
+</body>
+</html>

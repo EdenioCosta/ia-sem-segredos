@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imersão IA Sem Segredos — Inscreva-se Gratuitamente</title>
+    <meta name="description" content="Descubra como pessoas comuns estão ganhando dinheiro com IA. Imersão presencial de 1 dia no Rio de Janeiro. Inscreva-se gratuitamente.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                            sans: ['Outfit', 'sans-serif'],
+                            heading: ['Space Grotesk', 'sans-serif'],
+                        },
+                        fontSize: {
+                            'xs': '0.78rem',
+                            'sm': '0.85rem',
+                            'base': '0.95rem',
+                            'lg': '1.05rem',
+                            'xl': '1.18rem',
+                            '2xl': '1.4rem',
+                            '3xl': '1.7rem',
+                            '4xl': '2.1rem',
+                            '5xl': '2.8rem',
+                            '6xl': '3.5rem',
+                        },
+                    colors: {
+                        brand: {
+                            bg: '#0a0a0a',
+                            card: '#111111',
+                            card2: '#141414',
+                            border: '#1a1a1a',
+                            border2: '#222222',
+                            green: '#00E676',
+                            greenHover: '#00C853',
+                            pink: '#e84393',
+                            text: '#d1d5db',
+                            white: '#ffffff',
+                            red: '#ef4444',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #0a0a0a; color: #d1d5db; font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, .font-heading { font-family: 'Space Grotesk', sans-serif; }
+        .cta-btn { background-color: #00E676; color: #0a0a0a; }
+        .cta-btn:hover { background-color: #00C853; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,230,118,0.3); }
+        .cta-btn { transition: all 0.3s ease; }
+        input:focus { outline: none; border-color: #00E676; box-shadow: 0 0 0 3px rgba(0,230,118,0.1); }
+        .mobile-cta { transform: translateY(100%); transition: transform 0.3s ease; }
+        .mobile-cta.show { transform: translateY(0); }
+
+        /* === FOTO REALISTA === */
+        .foto-real {
+            filter: saturate(0.85) contrast(1.05) brightness(0.95);
+        }
+        .foto-real::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            mix-blend-mode: overlay;
+        }
+
+        /* === GRID DE CIRCUITO (background) === */
+        .circuit-grid {
+            background-image:
+                linear-gradient(rgba(0,230,118,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,230,118,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* === GLASSMORPHISM === */
+        .glass {
+            background: rgba(17,17,17,0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .glass-green {
+            background: rgba(0,230,118,0.04);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0,230,118,0.12);
+        }
+
+        /* === GLOW EFFECTS === */
+        .glow-green { box-shadow: 0 0 60px rgba(0,230,118,0.08); }
+        .glow-dot { box-shadow: 0 0 12px rgba(0,230,118,0.6); }
+
+        /* === ELEMENTOS FLUTUANTES === */
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        @keyframes float-medium {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(-3deg); }
+        }
+        @keyframes float-fast {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(4deg); }
+        }
+        @keyframes float-drift {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, -15px) rotate(5deg); }
+            50% { transform: translate(-5px, -25px) rotate(-3deg); }
+            75% { transform: translate(8px, -10px) rotate(2deg); }
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 0.4; }
+            100% { transform: scale(1.8); opacity: 0; }
+        }
+        @keyframes data-stream {
+            0% { transform: translateY(0); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+        .float-slow { animation: float-slow 6s ease-in-out infinite; }
+        .float-medium { animation: float-medium 4.5s ease-in-out infinite; }
+        .float-fast { animation: float-fast 3s ease-in-out infinite; }
+        .float-drift { animation: float-drift 8s ease-in-out infinite; }
+
+        /* === FLOATING ELEMENT BASE === */
+        .floating-el {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.15;
+        }
+        .floating-el.bright { opacity: 0.25; }
+
+        /* === DATA NODES (dots nos cruzamentos da grade) === */
+        .data-node {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #00E676;
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+        .data-node::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,230,118,0.15);
+            animation: pulse-ring 3s ease-out infinite;
+        }
+
+        /* === CONNECTION LINES === */
+        .connect-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0,230,118,0.1), transparent);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== ELEMENTOS FLUTUANTES GLOBAIS ========== -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <!-- Data nodes (pontos brilhantes) -->
+        <div class="data-node" style="top:15%; left:20%;"></div>
+        <div class="data-node" style="top:30%; right:25%;"></div>
+        <div class="data-node" style="top:50%; left:8%;"></div>
+        <div class="data-node" style="top:70%; right:15%;"></div>
+        <div class="data-node" style="top:85%; left:30%;"></div>
+
+        <!-- Connection lines -->
+        <div class="connect-line" style="top:15%; left:0; width:100%;"></div>
+        <div class="connect-line" style="top:45%; left:0; width:100%;"></div>
+        <div class="connect-line" style="top:75%; left:0; width:100%;"></div>
+    </div>
+
+
+    <!-- ========== HEADER MÍNIMO ========== -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-sm text-gray-500">imersão de</span>
+                <span class="text-lg font-bold text-white">IA <span class="text-gray-400 font-light">Sem</span> Segredos</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-brand-green glow-dot animate-pulse"></span>
+                <span class="text-xs text-gray-500">[INSERIR DATA] · Presencial no Rio de Janeiro</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== 1. HERO ========== -->
+    <section class="relative min-h-screen flex items-center pt-20 pb-12 px-4 circuit-grid">
+
+        <!-- Glow orbs de fundo -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-brand-green/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-brand-pink/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto w-full">
+            <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+                <!-- Lado esquerdo -->
+                <div>
+                    <!-- Headline -->
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-snug mb-4">
+                        Ainda não entendeu como usar a <span class="text-brand-green">Inteligência Artificial</span> a seu favor?
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-lg text-brand-text leading-normal mb-6">
+                        Não é falta de capacidade, é a forma como te explicaram. <strong class="text-white">Vem comigo que eu te mostro o jeito simples de usar isso na prática, enquanto ainda dá tempo de sair na frente.</strong>
+                    </p>
+
+                    <!-- Foto mobile -->
+                    <div class="md:hidden mb-6 flex justify-center">
+                        <div class="relative">
+                            <div class="relative w-56 h-64 rounded-2xl overflow-hidden glow-green foto-real">
+                                <img src="edenio-costa.jpg" alt="Edenio Costa" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div class="absolute -bottom-3 -right-3 glass rounded-lg px-3 py-2 flex items-center gap-2 float-slow">
+                                <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                <span class="text-white text-[10px] font-bold">IA Aplicada</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulário -->
+                    <div id="form" class="glass rounded-2xl p-6 sm:p-7 glow-green">
+                        <p class="text-sm text-brand-green font-semibold uppercase tracking-wider mb-4">Inscreva-se gratuitamente abaixo</p>
+                        <form action="[INSERIR URL DO FORMULÁRIO]" method="POST" class="space-y-3">
+                            <input type="text" name="name" placeholder="Seu primeiro nome" required
+                                class="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder-gray-500 transition-all">
+                            <input type="email" name="email" placeholder="Seu melhor e-mail" required
+                                class="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder-gray-500 transition-all">
+                            <input type="tel" name="phone" placeholder="Seu número de WhatsApp" required
+                                class="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder-gray-500 transition-all">
+                            <button type="submit" class="cta-btn w-full rounded-xl px-6 py-4 font-bold text-lg uppercase tracking-wide">
+                                Quero participar da imersão
+                            </button>
+                        </form>
+                        <p class="text-xs text-gray-600 mt-3 leading-relaxed">
+                            Seus dados são tratados nos termos da LGPD. <a href="#" class="underline hover:text-gray-400">Política de Privacidade</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Lado direito — Foto desktop com animações -->
+                <div class="hidden md:flex justify-center">
+                    <div class="relative">
+                        <!-- Foto principal -->
+                        <div class="relative w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden glow-green foto-real">
+                            <img src="edenio-costa.jpg" alt="Edenio Costa" class="w-full h-full object-cover object-top">
+                        </div>
+
+                        <!-- Badge flutuante inferior esquerdo -->
+                        <div class="absolute -bottom-4 -left-6 glass rounded-xl px-4 py-3 flex items-center gap-3 float-medium">
+                            <div class="w-9 h-9 rounded-lg bg-brand-green/10 border border-brand-green/20 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white text-xs font-bold">IA Aplicada</p>
+                                <p class="text-gray-500 text-[10px]">Sem código, sem design</p>
+                            </div>
+                        </div>
+
+                        <!-- Badge flutuante superior direito -->
+                        <div class="absolute -top-4 -right-6 glass rounded-xl px-4 py-3 flex items-center gap-3 float-slow">
+                            <div class="w-9 h-9 rounded-lg bg-brand-green/10 border border-brand-green/20 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white text-xs font-bold">Renda com IA</p>
+                                <p class="text-gray-500 text-[10px]">Do zero ao primeiro cliente</p>
+                            </div>
+                        </div>
+
+                        <!-- Badge lateral direito -->
+                        <div class="absolute top-1/2 -translate-y-1/2 -right-8 glass rounded-xl px-4 py-3 flex items-center gap-3 float-drift">
+                            <div class="w-9 h-9 rounded-lg bg-brand-green/10 border border-brand-green/20 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white text-xs font-bold">Primeiro cliente</p>
+                                <p class="text-gray-500 text-[10px]">Em poucos dias</p>
+                            </div>
+                        </div>
+
+                        <!-- Glow ring atrás da foto -->
+                        <div class="absolute -inset-3 rounded-3xl border border-brand-green/10 -z-10"></div>
+                        <div class="absolute -inset-6 rounded-3xl border border-brand-green/5 -z-10"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== 2. DOR — Agitação ========== -->
+    <section class="relative py-20 px-4 border-t border-brand-border">
+        <!-- Glow orb -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-pink/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto">
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white text-center leading-tight mb-4">
+                Tem gente crescendo, faturando e fechando clientes com IA. <span class="text-brand-green">Com menos esforço e menos experiência que você.</span>
+            </h2>
+
+            <p class="text-center text-brand-pink font-semibold text-lg mb-12">Isso não é coincidência.</p>
+
+            <div class="glass rounded-2xl p-8 sm:p-10 space-y-5 text-lg leading-relaxed mb-10">
+                <p>Enquanto a maioria das pessoas ainda usa IA pra brincar, fazer imagem engraçada, testar chatbot e pronto, um grupo menor já descobriu que dá pra <strong class="text-white">transformar isso em renda real.</strong></p>
+                <p>Criação de imagens profissionais, vídeos cinematográficos, campanhas publicitárias. Tudo isso que empresas pagam caro pra agências e designers, <strong class="text-white">a IA já faz. E faz rápido.</strong></p>
+                <p>A questão não é se dá pra ganhar dinheiro com IA. <strong class="text-white">A questão é se você vai aprender antes ou depois dos seus concorrentes.</strong></p>
+            </div>
+
+            <div class="text-center">
+                <a href="#form" class="cta-btn inline-block rounded-xl px-10 py-4 font-bold text-lg uppercase tracking-wide">
+                    Quero participar da imersão
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========== 3. BENEFÍCIOS — O que vai aprender ========== -->
+    <section class="relative py-20 px-4 border-t border-brand-border circuit-grid">
+        <div class="relative z-10 max-w-4xl mx-auto">
+
+            <p class="text-center text-brand-green font-semibold uppercase tracking-wider text-sm mb-4">Na imersão IA Sem Segredos, você vai aprender na prática:</p>
+
+            <div class="grid sm:grid-cols-3 gap-6 mt-10">
+                <div class="glass-green rounded-2xl p-7 glow-green hover:border-brand-green/30 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-brand-green/10 border border-brand-green/20 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <p class="text-white font-semibold text-lg mb-2">Quais serviços de IA empresas já pagam</p>
+                    <p class="text-brand-text text-sm">E como começar a oferecer essa semana, mesmo sem experiência nenhuma.</p>
+                </div>
+                <div class="glass-green rounded-2xl p-7 glow-green hover:border-brand-green/30 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-brand-green/10 border border-brand-green/20 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <p class="text-white font-semibold text-lg mb-2">Como criar imagens e vídeos profissionais com IA</p>
+                    <p class="text-brand-text text-sm">Sem Photoshop, sem Canva, sem saber design. Só com comandos de texto.</p>
+                </div>
+                <div class="glass-green rounded-2xl p-7 glow-green hover:border-brand-green/30 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-brand-green/10 border border-brand-green/20 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    </div>
+                    <p class="text-white font-semibold text-lg mb-2">O caminho do zero ao primeiro cliente pagante</p>
+                    <p class="text-brand-text text-sm">O passo a passo pra você sair da imersão e já começar a faturar com IA.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#form" class="cta-btn inline-block rounded-xl px-10 py-4 font-bold text-lg uppercase tracking-wide">
+                    Quero participar da imersão
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========== 4. PARA QUEM É / NÃO É ========== -->
+    <section class="relative py-20 px-4 border-t border-brand-border">
+        <!-- Glow orbs -->
+        <div class="absolute top-20 left-0 w-80 h-80 bg-brand-green/3 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-20 right-0 w-80 h-80 bg-brand-red/3 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto">
+
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white text-center leading-tight mb-4">
+                Essa imersão é pra quem quer aprender IA e transformar isso em resultado.
+            </h2>
+            <p class="text-center text-brand-text text-lg mb-14 max-w-2xl mx-auto">
+                Zero experiência com IA? Melhor ainda. Você só precisa aparecer. O resto eu te mostro, passo a passo, ao vivo.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- É pra você -->
+                <div class="glass rounded-2xl p-8 border-brand-green/15 hover:border-brand-green/30 transition-all">
+                    <h3 class="text-brand-green font-bold text-lg mb-6 flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-brand-green/10 flex items-center justify-center text-sm">✓</span>
+                        É pra você que:
+                    </h3>
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>É empreendedor e quer criar campanhas profissionais <strong class="text-white">sem gastar com agência</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>É criador de conteúdo e quer <strong class="text-white">produzir em minutos</strong> o que outros levam horas</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>Já ouviu falar de IA mas <strong class="text-white">nunca parou pra entender</strong> como aplicar pra ganhar dinheiro</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-green mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>Quer <strong class="text-white">sair na frente</strong> antes que o mercado force a mudança</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Não é pra você -->
+                <div class="glass rounded-2xl p-8 border-brand-red/15 hover:border-brand-red/30 transition-all">
+                    <h3 class="text-brand-red font-bold text-lg mb-6 flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-brand-red/10 flex items-center justify-center text-sm">✕</span>
+                        Não é pra você que:
+                    </h3>
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-red mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                            <span>Quer fórmula mágica sem fazer nada. Aqui é <strong class="text-white">mão na massa</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-red mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                            <span>Acha que IA é "modinha" e <strong class="text-white">não vai durar</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-red mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                            <span>Tá esperando o <strong class="text-white">momento perfeito</strong> pra começar</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <p class="text-center text-white font-semibold text-xl mt-12 mb-8">
+                Quem aprende agora escolhe onde chegar. Quem espera, deixa o mercado escolher por ele.
+            </p>
+
+            <div class="text-center">
+                <a href="#form" class="cta-btn inline-block rounded-xl px-10 py-4 font-bold text-lg uppercase tracking-wide">
+                    Quero participar da imersão
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========== 5. AUTORIDADE — Quem é Edenio Costa ========== -->
+    <section class="relative py-20 px-4 border-t border-brand-border overflow-hidden">
+        <!-- Background accent -->
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-card via-brand-bg to-brand-bg"></div>
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-green/3 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto">
+
+            <div class="grid md:grid-cols-5 gap-12 items-center">
+
+                <!-- Foto (2 colunas) -->
+                <div class="md:col-span-2 flex justify-center">
+                    <div class="relative">
+                        <div class="relative w-full max-w-xs aspect-[3/4] rounded-2xl overflow-hidden glow-green foto-real">
+                            <img src="edenio-costa.jpg" alt="Edenio Costa" class="w-full h-full object-cover object-top">
+                        </div>
+                        <!-- Badge -->
+                        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 glass rounded-full px-5 py-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-brand-green glow-dot"></span>
+                            <span class="text-brand-green text-xs font-bold uppercase tracking-wider">Expert em IA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio (3 colunas) -->
+                <div class="md:col-span-3 space-y-5 text-lg leading-relaxed">
+                    <p>Eu não sou programador. Não sou designer. Não tenho formação em tecnologia.</p>
+
+                    <p><strong class="text-white">Sou uma pessoa comum que descobriu como transformar IA em renda.</strong> E hoje, ensino outras pessoas a fazerem o mesmo.</p>
+
+                    <p>Vi gente saindo do zero e faturando em semanas. Vi pessoas que nunca tinham criado nada na vida entregando projetos profissionais para empresas. <strong class="text-white">E sendo pagas por isso.</strong></p>
+
+                    <p>Vi o mercado de IA explodir. E a maioria das pessoas ainda sem saber como aproveitar.</p>
+
+                    <p>No dia <strong class="text-white">[INSERIR DATA]</strong>, eu quero te mostrar exatamente como fazer isso. Ao vivo. Na prática. Sem enrolação. Sem jargão técnico.</p>
+
+                    <div class="pt-4">
+                        <p class="text-brand-green text-sm font-bold uppercase tracking-widest">Edenio Costa</p>
+                        <p class="text-gray-500 text-sm mt-1">Empreendedor serial · Especialista em IA aplicada</p>
+                    </div>
+
+                    <!-- Logos em glass cards -->
+                    <div class="flex items-center gap-3 pt-2 flex-wrap">
+                        <span class="glass rounded-lg px-3 py-1.5 text-gray-500 text-xs font-semibold">Doctor IA</span>
+                        <span class="glass rounded-lg px-3 py-1.5 text-gray-500 text-xs font-semibold">OticaPro</span>
+                        <span class="glass rounded-lg px-3 py-1.5 text-gray-500 text-xs font-semibold">EducaPro</span>
+                        <span class="glass rounded-lg px-3 py-1.5 text-gray-500 text-xs font-semibold">MidiaPro</span>
+                        <span class="glass rounded-lg px-3 py-1.5 text-gray-500 text-xs font-semibold">TaskPro</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-14">
+                <a href="#form" class="cta-btn inline-block rounded-xl px-10 py-4 font-bold text-lg uppercase tracking-wide">
+                    Quero participar da imersão
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========== 6. URGÊNCIA — Dados + Escassez ========== -->
+    <section class="relative py-20 px-4 border-t border-brand-border circuit-grid">
+        <!-- Glow central -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-brand-green/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto text-center">
+
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-6">
+                Você chegou até aqui. <span class="text-brand-green">Agora só falta um passo.</span>
+            </h2>
+
+            <!-- Stats em glass cards -->
+            <div class="flex flex-wrap justify-center gap-4 mb-10">
+                <div class="glass rounded-xl px-6 py-4 text-center">
+                    <p class="text-brand-green text-2xl font-extrabold">9M+</p>
+                    <p class="text-gray-500 text-xs mt-1">empresas usando IA</p>
+                </div>
+                <div class="glass rounded-xl px-6 py-4 text-center">
+                    <p class="text-brand-green text-2xl font-extrabold">30%</p>
+                    <p class="text-gray-500 text-xs mt-1">crescimento ao ano</p>
+                </div>
+                <div class="glass rounded-xl px-6 py-4 text-center">
+                    <p class="text-brand-green text-2xl font-extrabold">1 dia</p>
+                    <p class="text-gray-500 text-xs mt-1">pra sair na frente</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 text-lg leading-relaxed mb-10">
+                <p><strong class="text-white">Essa é a janela.</strong> Quem entra agora, entra com vantagem. Quem espera, entra correndo atrás.</p>
+                <p class="text-white font-semibold text-xl">Só tem dois caminhos: aprender agora e sair na frente, ou esperar e correr atrás depois.</p>
+            </div>
+
+            <a href="#form" class="cta-btn inline-block rounded-xl px-12 py-5 font-bold text-xl uppercase tracking-wide">
+                Quero participar da imersão
+            </a>
+
+            <p class="text-gray-600 text-sm mt-6">Vagas limitadas. Inscrições abertas enquanto houver lugares disponíveis.</p>
+
+        </div>
+    </section>
+
+
+    <!-- ========== 7. RODAPÉ ========== -->
+    <footer class="py-8 px-4 border-t border-brand-border">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-gray-600 text-sm">Todos os direitos reservados © 2026 IA Sem Segredos</p>
+            <div class="flex items-center gap-4">
+                <a href="#" class="text-gray-600 hover:text-gray-400 text-sm transition-colors">Política de Privacidade</a>
+                <a href="#" class="text-gray-600 hover:text-gray-400 text-sm transition-colors">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ========== WHATSAPP FLUTUANTE ========== -->
+    <a href="[INSERIR LINK WHATSAPP]" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.252-.151-2.738.813.813-2.738-.165-.262A7.963 7.963 0 014 12a8 8 0 1116 0 8 8 0 01-8 8z"/></svg>
+    </a>
+
+
+    <!-- ========== CTA FIXO MOBILE ========== -->
+    <div id="mobileCta" class="mobile-cta fixed bottom-0 left-0 right-0 z-40 p-3 glass border-t border-brand-border md:hidden">
+        <a href="#form" class="cta-btn block text-center rounded-xl px-6 py-3.5 font-bold uppercase tracking-wide">
+            Quero participar da imersão
+        </a>
+    </div>
+
+
+    <!-- ========== SCRIPTS ========== -->
+    <script>
+        // Mobile CTA — aparece ao scrollar
+        const mobileCta = document.getElementById('mobileCta');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                mobileCta.classList.add('show');
+            } else {
+                mobileCta.classList.remove('show');
+            }
+        }, { passive: true });
+
+        // Smooth scroll para links âncora
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>
