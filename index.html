@@ -61,41 +61,51 @@
 
         /* === MOBILE OPTIMIZATIONS === */
         @media (max-width: 640px) {
-            /* Hero: headline menor e mais compacto */
-            h1 { font-size: 1.6rem !important; line-height: 1.3; }
-            h2 { font-size: 1.35rem !important; line-height: 1.3; }
-            h3 { font-size: 1.05rem !important; }
+            /* Tipografia mobile */
+            h1 { font-size: 1.55rem !important; line-height: 1.25; }
+            h2 { font-size: 1.3rem !important; line-height: 1.25; }
+            h3 { font-size: 1rem !important; }
+            .text-lg { font-size: 0.92rem !important; line-height: 1.5; }
+            p, li, span { font-size: 0.88rem; }
 
-            /* Seções com menos padding vertical (exceto hero) */
-            section { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-            section:first-of-type { padding-top: 5rem !important; }
+            /* Seções: padding reduzido */
+            section { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; padding-left: 1rem !important; padding-right: 1rem !important; }
+            section:first-of-type { padding-top: 4.5rem !important; }
 
-            /* Cards com menos padding */
-            .glass, .glass-green { padding: 1.25rem !important; }
+            /* Cards glass mais compactos */
+            .glass, .glass-green { padding: 1.1rem !important; }
 
-            /* Formulário mais compacto */
-            #form input { padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; font-size: 0.9rem; }
-            #form button { padding-top: 0.85rem !important; padding-bottom: 0.85rem !important; }
+            /* Formulário compacto */
+            #form input { padding: 0.7rem 1rem !important; font-size: 0.88rem; }
+            #form button { padding: 0.8rem 1rem !important; font-size: 0.95rem; }
+            #form .text-sm { font-size: 0.7rem !important; }
 
-            /* Subtexto menor */
-            .text-lg { font-size: 0.95rem !important; }
+            /* Foto mobile: largura total, sem bordas */
+            .mobile-hero-photo { max-width: 80%; margin: 0 auto; }
 
-            /* Foto mobile menor e centralizada */
-            .foto-real img { object-position: top center; }
+            /* Stats cards */
+            .stats-grid { gap: 0.4rem !important; }
+            .stats-grid > div { padding: 0.6rem 0.8rem !important; }
+            .stats-grid .text-2xl { font-size: 1.1rem !important; }
+            .stats-grid .text-xs { font-size: 0.65rem !important; }
 
-            /* Stats cards em linha */
-            .stats-grid { gap: 0.5rem !important; }
-            .stats-grid > div { padding: 0.75rem 1rem !important; }
-            .stats-grid .text-2xl { font-size: 1.2rem !important; }
+            /* CTAs full width */
+            .cta-btn { width: 100%; text-align: center; display: block; font-size: 0.9rem !important; padding: 0.85rem !important; }
 
-            /* CTA buttons full width */
-            .cta-btn { width: 100%; text-align: center; display: block; }
+            /* Cards benefícios */
+            .benefit-card { padding: 1rem !important; }
+            .benefit-card .w-12 { width: 2.25rem !important; height: 2.25rem !important; }
 
-            /* Espaço pro CTA fixo no bottom */
-            footer { padding-bottom: 5rem !important; }
+            /* Para quem é / Não é */
+            .who-card ul { gap: 0.75rem !important; }
+            .who-card li { font-size: 0.85rem; }
 
-            /* WhatsApp button sobe pra não sobrepor CTA */
-            .whatsapp-float { bottom: 70px !important; }
+            /* Autoridade: foto + bio empilhados */
+            .authority-photo { max-width: 200px !important; }
+
+            /* Rodapé + CTA fixo */
+            footer { padding-bottom: 4.5rem !important; }
+            .whatsapp-float { bottom: 65px !important; }
         }
 
         /* === FOTO REALISTA === */
@@ -277,7 +287,7 @@
 
                     <!-- Foto mobile — seamless -->
                     <div class="md:hidden mb-6 flex justify-center">
-                        <div class="relative w-full max-w-xs overflow-hidden">
+                        <div class="relative w-full max-w-xs mobile-hero-photo overflow-hidden">
                             <img src="edenio-hero.jpg" alt="Edenio Costa" class="w-full foto-real rounded-xl" style="mask-image: linear-gradient(to bottom, black 70%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);">
                             <div class="absolute inset-0 rounded-xl" style="background: radial-gradient(ellipse 50% 45% at 50% 35%, rgba(255,255,255,0.08) 0%, transparent 70%); pointer-events: none;"></div>
                         </div>
