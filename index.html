@@ -254,6 +254,8 @@
         <!-- Foto background seamless (desktop) — funde com o fundo escuro -->
         <div class="hidden md:block absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none overflow-hidden">
             <img src="edenio-hero.jpg" alt="Edenio Costa" class="absolute bottom-0 right-0 w-full h-full object-cover object-top scale-110 foto-real" style="mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 40%, transparent 72%); -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 40%, transparent 72%);">
+            <!-- Iluminação sutil no sujeito (centro) -->
+            <div class="absolute inset-0" style="background: radial-gradient(ellipse 45% 50% at 50% 35%, rgba(255,255,255,0.08) 0%, transparent 70%); pointer-events: none;"></div>
             <!-- Fade edges pra fundir com background -->
             <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/30 to-transparent"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]/70"></div>
@@ -277,8 +279,9 @@
 
                     <!-- Foto mobile — seamless -->
                     <div class="md:hidden mb-6 flex justify-center">
-                        <div class="relative w-full max-w-xs">
+                        <div class="relative w-full max-w-xs overflow-hidden">
                             <img src="edenio-hero.jpg" alt="Edenio Costa" class="w-full foto-real rounded-xl" style="mask-image: linear-gradient(to bottom, black 70%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);">
+                            <div class="absolute inset-0 rounded-xl" style="background: radial-gradient(ellipse 50% 45% at 50% 35%, rgba(255,255,255,0.08) 0%, transparent 70%); pointer-events: none;"></div>
                         </div>
                     </div>
 
