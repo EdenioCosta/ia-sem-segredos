@@ -1,6 +1,7 @@
 # PÁGINA DE CAPTURA — IMERSÃO IA SEM SEGREDOS
 *Página de captura de leads derivada da página de vendas*
 *Pilares: FOMO + Curiosidade + Simplicidade*
+*URL: www.iasemsegredos.com.br*
 
 ---
 
@@ -11,12 +12,12 @@
 **Data do evento:** [INSERIR DATA] · Presencial no Rio de Janeiro
 
 **Headline:**
-"Existe um jeito simples de ganhar dinheiro com IA que pouca gente conhece. Em 1 dia, eu te mostro qual é."
+"Existe uma forma simples de ganhar dinheiro com IA que a maioria das pessoas ainda não percebeu"
 
-**Subtítulo:**
-"Uma imersão presencial e prática pra você que não é designer, não é programador e nunca mexeu com IA na vida — e quer transformar isso em renda."
+**Subheadline:**
+"Em 1 dia eu te mostro na prática, enquanto ainda dá tempo de sair na frente."
 
-**Foto:** Edenio Costa (casaco amarelo)
+**Foto:** Edenio Costa (poltrona, casaco amarelo, fundo escuro)
 
 **Formulário:**
 - Texto acima: "Inscreva-se gratuitamente abaixo"
@@ -24,7 +25,12 @@
 - Campo: Seu melhor e-mail
 - Campo: Seu número de WhatsApp
 - Botão CTA: "QUERO PARTICIPAR DA IMERSÃO"
-- Texto LGPD: "Prometemos não utilizar suas informações para enviar SPAM. Seus dados são tratados nos termos da LGPD. Para mais informações, acesse nossa Política de Privacidade."
+- Texto LGPD: "Seus dados são tratados nos termos da LGPD. Política de Privacidade."
+
+**Badges flutuantes (desktop):**
+- IA Aplicada | Sem código, sem design
+- Renda com IA | Do zero ao primeiro cliente
+- Primeiro cliente | Em poucos dias
 
 ---
 
@@ -37,9 +43,9 @@
 "Isso não é coincidência."
 
 **Texto:**
-"Enquanto a maioria das pessoas ainda usa IA pra brincar — fazer imagem engraçada, testar chatbot e pronto — um grupo menor já descobriu que dá pra transformar isso em renda real.
+"Enquanto a maioria das pessoas ainda usa IA pra brincar, fazer imagem engraçada, testar chatbot e pronto, um grupo menor já descobriu que dá pra transformar isso em renda real.
 
-Criação de imagens profissionais, vídeos cinematográficos, campanhas publicitárias — tudo isso que empresas pagam caro pra agências e designers, a IA já faz. E faz rápido.
+Criação de imagens profissionais, vídeos cinematográficos, campanhas publicitárias. Tudo isso que empresas pagam caro pra agências e designers, a IA já faz. E faz rápido.
 
 A questão não é se dá pra ganhar dinheiro com IA. A questão é se você vai aprender antes ou depois dos seus concorrentes."
 
@@ -53,7 +59,7 @@ A questão não é se dá pra ganhar dinheiro com IA. A questão é se você vai
 
 ### Benefício 1
 **Título:** Quais serviços de IA empresas já pagam
-**Descrição:** E como começar a oferecer essa semana — mesmo sem experiência nenhuma.
+**Descrição:** E como começar a oferecer essa semana, mesmo sem experiência nenhuma.
 
 ### Benefício 2
 **Título:** Como criar imagens e vídeos profissionais com IA
@@ -73,7 +79,7 @@ A questão não é se dá pra ganhar dinheiro com IA. A questão é se você vai
 "Essa imersão é pra quem quer aprender IA e transformar isso em resultado."
 
 **Subtítulo:**
-"Zero experiência com IA? Melhor ainda. Você só precisa aparecer — o resto eu te mostro, passo a passo, ao vivo."
+"Zero experiência com IA? Melhor ainda. Você só precisa aparecer. O resto eu te mostro, passo a passo, ao vivo."
 
 ### É pra você que:
 - É empreendedor e quer criar campanhas profissionais sem gastar com agência
@@ -82,7 +88,7 @@ A questão não é se dá pra ganhar dinheiro com IA. A questão é se você vai
 - Quer sair na frente antes que o mercado force a mudança
 
 ### Não é pra você que:
-- Quer fórmula mágica sem fazer nada — aqui é mão na massa
+- Quer fórmula mágica sem fazer nada. Aqui é mão na massa
 - Acha que IA é "modinha" e não vai durar
 - Tá esperando o momento perfeito pra começar
 
@@ -95,16 +101,17 @@ A questão não é se dá pra ganhar dinheiro com IA. A questão é se você vai
 
 ## 5. AUTORIDADE (Quem é Edenio Costa)
 
-**Foto:** Edenio Costa (casaco amarelo)
+**Foto:** Edenio Costa (casaco amarelo, mesma foto do hero)
+**Badge:** Expert em IA
 
 **Bio:**
 "Eu não sou programador. Não sou designer. Não tenho formação em tecnologia.
 
 Sou uma pessoa comum que descobriu como transformar IA em renda. E hoje, ensino outras pessoas a fazerem o mesmo.
 
-Vi gente saindo do zero e faturando em semanas. Vi pessoas que nunca tinham criado nada na vida entregando projetos profissionais para empresas — e sendo pagas por isso.
+Vi gente saindo do zero e faturando em semanas. Vi pessoas que nunca tinham criado nada na vida entregando projetos profissionais para empresas. E sendo pagas por isso.
 
-Vi o mercado de IA explodir — e a maioria das pessoas ainda sem saber como aproveitar.
+Vi o mercado de IA explodir. E a maioria das pessoas ainda sem saber como aproveitar.
 
 No dia [INSERIR DATA], eu quero te mostrar exatamente como fazer isso. Ao vivo. Na prática. Sem enrolação. Sem jargão técnico."
 
@@ -134,13 +141,13 @@ Só tem dois caminhos: aprender agora e sair na frente, ou esperar e correr atr�
 
 **Botão CTA:** "QUERO PARTICIPAR DA IMERSÃO"
 
-**Texto de escassez:** "Vagas limitadas — inscrições abertas enquanto houver lugares disponíveis."
+**Texto de escassez:** "Vagas limitadas. Inscrições abertas enquanto houver lugares disponíveis."
 
 ---
 
 ## 7. RODAPÉ
 
-"Todos os direitos reservados © 2026 — IA Sem Segredos"
+"Todos os direitos reservados © 2026 IA Sem Segredos"
 
 Links:
 - Política de Privacidade
@@ -151,7 +158,7 @@ Links:
 # ESTRUTURA RESUMIDA
 
 ```
-1. HERO          → Headline + Subtítulo + Foto + Formulário (nome, email, WhatsApp)
+1. HERO          → Headline (curiosidade+FOMO) + Subheadline + Foto seamless + Formulário
 2. DOR           → "Tem gente faturando com IA com menos experiência que você"
 3. BENEFÍCIOS    → 3 cards (serviços de IA, imagens/vídeos, primeiro cliente)
 4. PARA QUEM É   → É pra você (4 items) / Não é pra você (3 items)
@@ -169,25 +176,32 @@ Links:
 - WhatsApp
 
 ## Elementos visuais:
-- Foto do Edenio Costa (casaco amarelo) — hero + autoridade
+- Foto do Edenio Costa (poltrona, casaco amarelo, fundo escuro) — hero seamless + autoridade
 - Grid de circuito no background (tech/IA)
 - Glassmorphism nos cards e formulário
 - Data nodes com pulse verde
 - Glow orbs difusos
 - Stats em glass cards
-- Badges flutuantes na foto
+- Badges flutuantes na foto (desktop): IA Aplicada, Renda com IA, Primeiro cliente
 
 ## Design:
 - Fontes: Space Grotesk (headlines) + Outfit (corpo)
+- Headline: line-height 1.1, letter-spacing -0.02em
 - Cor primária CTA: #00E676 (verde)
 - Fundo: #0a0a0a (escuro)
 - Cards: glassmorphism
 - Estilo: tech, minimalista, dark mode
+- Mobile: otimizado com CTA fixo no bottom
+
+## Deploy:
+- GitHub: github.com/EdenioCosta/ia-sem-segredos
+- Hosting: Vercel
+- Domínio: www.iasemsegredos.com.br
+- Deploy automático via push no main
 
 ## Placeholders pendentes:
 - [INSERIR DATA] — data do evento
 - [INSERIR URL DO FORMULÁRIO] — action do form
 - [INSERIR LINK WHATSAPP] — botão flutuante
-- [INSERIR BAIRRO/REGIÃO] — localização (não aparece na captura)
 
 ---
